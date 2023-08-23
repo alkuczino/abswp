@@ -22,20 +22,20 @@ def generateQuiz(input_capitals, quizes_number):
             question_number += 1
         
 def generateQuizFile(quiz_number):
-    with open (f'capitals_quiz{quiz_number + 1}.txt', 'w') as quiz_file:
+    with open (f'./quizes/apitals_quiz{quiz_number + 1}.txt', 'w') as quiz_file:
         quiz_file.write('Name:\n\nDate:\n\nGroup:\n\n')
         quiz_file.write((' ' * 20) + f'State capitals Quiz (Form {quiz_number + 1})\n\n')
         
 def generateAnswersFile(quiz_number):
-    with open(f'capitals_quiz_answers{quiz_number + 1}.txt', 'w') as answers_file:
+    with open(f'./quizes/capitals_quiz_answers{quiz_number + 1}.txt', 'w') as answers_file:
         answers_file.write(f'Answers for quiz number {quiz_number + 1}\n')
         
 def appendQuizFile(quiz_number, text):
-    with open (f'capitals_quiz{quiz_number + 1}.txt', 'a') as quiz_file:
+    with open (f'./quizes/capitals_quiz{quiz_number + 1}.txt', 'a') as quiz_file:
         quiz_file.write(f'{text}')
 
 def appendAnswersFile(quiz_number, text):
-    with open(f'capitals_quiz_answers{quiz_number + 1}.txt', 'a') as answers_file:
+    with open(f'./quizes/capitals_quiz_answers{quiz_number + 1}.txt', 'a') as answers_file:
         answers_file.write(f'{text}')
         
 def generateAnswers(capitals, correct_answer):
